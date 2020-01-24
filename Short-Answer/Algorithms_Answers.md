@@ -5,7 +5,7 @@
 a) The time complexity is O(n) because the number of times that the loop will run is proportional to n. 
 
 
-b) The time complexity is O(n^2). For n=1, it runs 0 times. For n=5, it runs 15 times. For n=10, it runs 40 times and for n=20, it runs 100 times. This is clearly exponential. 
+b) The time complexity is O(n*log(n)). For n=1, it runs 0 times. For n=5, it runs 15 times. For n=10, it runs 40 times and for n=20, it runs 100 times. The curve is definitely curved and not straight so it is not O(n). However, it does not increase exponentially. Therefore, it is O(n*log(n)).  
 
 
 c) The time complexity is O(n) because the function will get called approximately n times. 
