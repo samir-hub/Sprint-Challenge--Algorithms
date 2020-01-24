@@ -104,13 +104,13 @@ class SortingRobot:
             # this performs the swaps once
             # I need to run them until no swaps are done
             self.set_light_off()
-            for i in range(0, len(l)):
+            while self.can_move_right():
                 self.swap_item()
                 self.move_right()
                 if self.compare_item() == 1:
                     self.swap_item()
                
-            for i in range(0, len(l)):
+            while self.can_move_left():
                 if self.can_move_right() == False:
                     self.swap_item()         
                 self.swap_item()
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
 
-    l = [20, 77, 45, 16, 15, 91, 12, 6, 24, 89, 53, 19, 85, 56, 13, 74, 48, 98, 9, 92, 25, 35, 54, 44, 50, 5, 75, 34, 2, 42, 87, 49, 76, 52, 43, 23, 7, 80, 66, 14, 46, 90, 88, 40, 97, 10, 57, 63, 1, 18, 67, 79, 96, 27, 73, 28, 32, 61, 30, 8, 17, 93, 26, 51, 60, 55, 62, 31, 47, 64, 39, 22, 99, 95, 83, 70, 38, 69, 36, 41, 37, 65, 84, 3, 29, 58, 0, 94, 4, 11, 33, 86, 21, 81, 72, 82, 59, 71, 68, 78]
+    l = [5, 4, 3, 2, 1]
 
     robot = SortingRobot(l)
 
