@@ -98,14 +98,23 @@ class SortingRobot:
         """
         # Fill this out
         # bubble sort
-        for i in range(0, len(l)):
-            self.swap_item()
-            self.move_right()
-            if self.compare_item() == 1:
-                self.swap_item()
-            
-            
+        # this performs the swaps once
+        n = 0 
+        while n < 250:
 
+            for i in range(0, len(l)):
+                self.swap_item()
+                self.move_right()
+                if self.compare_item() == 1:
+                    self.swap_item()
+            for i in range(0, len(l)):
+                self.swap_item()
+                self.move_left()
+                if self.compare_item() == -1:
+                    self.swap_item()  
+            n += 1        
+                                                                            
+                                       
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
