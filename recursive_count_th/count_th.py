@@ -16,5 +16,15 @@ def count_th(word, count = 0):
 
 
     
-print(count_th('THtHThth'))    
+#print(count_th('THtHThth'))    
 
+sum = 0
+n = 20
+
+for i in range(n):
+    j = 1
+    while j < n:
+        j *= 2
+        sum += 1
+
+print(sum)        
